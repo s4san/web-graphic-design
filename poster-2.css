@@ -1,0 +1,39 @@
+#poster-2 {
+    background-color: #BEBEBE;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle {
+    background-color: white;
+
+    width: 30vw;
+    height: calc(1.556745 * 30vw); /* Height should be ~1.55 times the width for this to work. */
+
+    box-shadow: -25px 25px 25px 0px #555;
+}
+
+.text {
+    background-color: black;
+    margin: 3vw;
+    margin-top: 3.5vw;
+
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 7vw;
+    line-height: 4.55vw;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    transform-origin: top left;
+    transform: scaleY(1.25);
+}
+
+.word {
+    position: relative;
+    left: -1vw;
+}

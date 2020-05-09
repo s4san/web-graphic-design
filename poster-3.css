@@ -1,0 +1,139 @@
+#poster-3 {
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    --blue-1: #9CBCB9;
+    --blue-2: #B5D7DB;
+    --blue-3: #1F405D;
+    --blue-4: #6390AE;
+    --red-1: #D0411E;
+    --red-2: #FF712F;
+    --brown-1: #B08B79;
+    --brown-2: #D7A371;
+    --brown-3: #413632;
+    --brown-4: #5E4435;
+
+    --blue-1-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.cover {
+    width: 41.527vw;
+    height: calc(41.527vw / 0.749373);
+
+    display: grid;
+    grid-template-rows: 2fr 1fr 1.25fr repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1.7629fr) repeat(2, 1.1538fr) 1fr 1.923fr;
+}
+
+.cover > * {
+    position: relative;
+}
+
+[class*='1_1'],
+[class*='1_3'],
+[class*='2_2'],
+[class*='3_2'],
+[class*='3_4'],
+[class*='4_2'],
+[class*='4_3'],
+[class*='5_2'],
+[class*='5_3'] {
+    grid-column-start: span 2;
+}
+
+[class*='1_2'],
+[class*='2_3'],
+[class*='6_1'],
+[class*='6_3'] {
+    grid-column-start: span 3;
+}
+
+.blue-1 {
+    background-color: var(--blue-1);
+}
+
+.blue-2 {
+    background-color: var(--blue-2);
+}
+
+.blue-3 {
+    background-color: var(--blue-3);
+}
+
+.blue-4 {
+    background-color: var(--blue-4);
+}
+
+.red-1 {
+    background-color: var(--red-1);
+}
+
+.red-2 {
+    background-color: var(--red-2);
+}
+
+.brown-1 {
+    background-color: var(--brown-1);
+}
+
+.brown-2 {
+    background-color: var(--brown-2);
+}
+
+.brown-3 {
+    background-color: var(--brown-3);
+}
+
+.brown-4 {
+    background-color: var(--brown-4);
+}
+
+[class*='1_1']::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: calc(100% + 6px);
+
+    position: absolute;
+    right: -25px;
+    top: 1px;
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    filter: blur(3px);
+}
+
+[class*='1_1']::after {
+    width: 32.5px;
+    right: -32.5px;
+}
+
+[class*='1_2'] {
+    box-shadow: 15px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+[class*='2_2'].brown-2 {
+    box-shadow: -10px 0px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+.brown-2 {
+    z-index: 4;
+    box-shadow: -17px 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.brown-2::after {
+    content: '';
+    width: 7px;
+    height: calc(100% + 2px);
+
+    position: absolute;
+    top: -2px;
+    right: -7px;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: blur(4px);
+
+    z-index: 1;
+}
